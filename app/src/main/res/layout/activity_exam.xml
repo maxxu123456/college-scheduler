@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.ExamActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ExamActivity">
+
+        <Button
+            android:id="@+id/examsHomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/examsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name of Exam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsHomeButton" />
+
+        <EditText
+            android:id="@+id/examsMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/examsName"
+            app:layout_constraintTop_toBottomOf="@+id/examsHomeButton" />
+
+        <EditText
+            android:id="@+id/examsDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsName" />
+
+        <EditText
+            android:id="@+id/examsYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Year"
+            app:layout_constraintStart_toEndOf="@+id/examsDay"
+            app:layout_constraintTop_toBottomOf="@+id/examsName" />
+
+        <EditText
+            android:id="@+id/examsTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            app:layout_constraintStart_toEndOf="@+id/examsYear"
+            app:layout_constraintTop_toBottomOf="@+id/examsMonth" />
+
+        <EditText
+            android:id="@+id/examsLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            app:layout_constraintStart_toEndOf="@+id/examsTime"
+            app:layout_constraintTop_toBottomOf="@+id/examsMonth" />
+
+        <Button
+            android:id="@+id/examsAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Exam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsLocation" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/examsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsAdd"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

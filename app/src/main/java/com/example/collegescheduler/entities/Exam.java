@@ -10,6 +10,9 @@ public class Exam {
     @ColumnInfo(name = "exam_id")
     private int examID;
 
+    @ColumnInfo(name = "exam_name")
+    private String examName;
+
     @ColumnInfo(name = "exam_month")
     private int examMonth;
 
@@ -25,8 +28,9 @@ public class Exam {
     @ColumnInfo(name = "exam_location")
     private String examLocation;
 
-    public Exam(int examID, int examMonth, int examDay, int examYear, String examTime, String examLocation) {
-        this.examID = examID;
+
+    public Exam(String examName, int examMonth, int examDay, int examYear, String examTime, String examLocation) {
+        this.examName = examName;
         this.examMonth = examMonth;
         this.examDay = examDay;
         this.examYear = examYear;
@@ -43,6 +47,14 @@ public class Exam {
 
     public void setExamID(int examID) {
         this.examID = examID;
+    }
+
+    public String getExamName() {
+        return examName;
+    }
+
+    public void setExamName(String examName) {
+        this.examName = examName;
     }
 
     public int getExamMonth() {
