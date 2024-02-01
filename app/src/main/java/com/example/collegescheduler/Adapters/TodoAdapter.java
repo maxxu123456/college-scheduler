@@ -1,7 +1,9 @@
 package com.example.collegescheduler.Adapters;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -38,8 +40,12 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
     public void onBindViewHolder(@NonNull TodoAdapter.TodoViewHolder holder, int position) {
         Todo current = todos.get(position);
         holder.todoListItemBinding.setTodo(current);
+        holder.todoCheckBox.setChecked(current.getTodoStatus());
     }
 
+    public boolean toBoolean(int num) {
+        return num != 0;
+    }
     @Override
     public int getItemCount() {
         if (todos != null) {
@@ -56,10 +62,15 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
 
     class TodoViewHolder extends RecyclerView.ViewHolder {
         private TodoListItemBinding todoListItemBinding;
+        CheckBox todoCheckBox;
 
         public TodoViewHolder(@NonNull TodoListItemBinding todoListItemBinding) {
             super(todoListItemBinding.getRoot());
             this.todoListItemBinding = todoListItemBinding;
+        }
+        public TodoViewHolder(@NonNull View itemView) {
+            super(itemView);
+            todoCheckBox = itemView.findViewById(R.id.todoCheckBox);
         }
     }
 }

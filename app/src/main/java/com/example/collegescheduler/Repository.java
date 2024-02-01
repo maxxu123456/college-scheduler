@@ -115,6 +115,15 @@ public class Repository {
         });
     }
 
+    public void updateTodo(Todo todo) {
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                todoDAO.update(todo);
+            }
+        });
+    }
+
     public LiveData<List<Assignment>> getAllAssignments() {
         return assignmentDAO.getAllAssignments();
     }
