@@ -10,11 +10,14 @@
 
         <Button
             android:id="@+id/examsHomeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="48dp"
-            android:text="Go Home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="42dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconTint="#373030"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +35,7 @@
 
         <EditText
             android:id="@+id/examsName"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:hint="Name of Exam"
@@ -45,10 +48,10 @@
             android:id="@+id/examsMonth"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:hint="Month"
             app:layout_constraintEnd_toStartOf="@+id/examsDay"
-            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintHorizontal_bias="0.647"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
@@ -56,10 +59,10 @@
             android:id="@+id/examsDay"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:hint="Day"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintHorizontal_bias="0.386"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
@@ -67,31 +70,32 @@
             android:id="@+id/examsYear"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:hint="Year"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.196"
+            app:layout_constraintHorizontal_bias="0.179"
             app:layout_constraintStart_toEndOf="@+id/examsDay"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsTime"
-            android:layout_width="wrap_content"
+            android:layout_width="65dp"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:hint="Time"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.368"
+            app:layout_constraintHorizontal_bias="0.363"
             app:layout_constraintStart_toEndOf="@+id/examsYear"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginTop="72dp"
             android:hint="Location"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
@@ -99,8 +103,9 @@
             android:id="@+id/examsAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="148dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#D58C53"
             android:text="Add Exam"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsLocation" />
