@@ -6,10 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.collegescheduler.Entities.Assignment;
-import com.example.collegescheduler.Entities.Course;
-import com.example.collegescheduler.Entities.Exam;
-import com.example.collegescheduler.Entities.Todo;
+import com.example.collegescheduler.entities.Assignment;
+import com.example.collegescheduler.entities.Course;
+import com.example.collegescheduler.entities.Exam;
+import com.example.collegescheduler.entities.Todo;
 
 import java.util.List;
 

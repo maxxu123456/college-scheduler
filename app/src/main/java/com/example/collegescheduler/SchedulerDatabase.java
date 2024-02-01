@@ -10,10 +10,10 @@ import com.example.collegescheduler.DAOs.AssignmentDAO;
 import com.example.collegescheduler.DAOs.CourseDAO;
 import com.example.collegescheduler.DAOs.ExamDAO;
 import com.example.collegescheduler.DAOs.TodoDAO;
-import com.example.collegescheduler.Entities.Assignment;
-import com.example.collegescheduler.Entities.Course;
-import com.example.collegescheduler.Entities.Exam;
-import com.example.collegescheduler.Entities.Todo;
+import com.example.collegescheduler.entities.Assignment;
+import com.example.collegescheduler.entities.Course;
+import com.example.collegescheduler.entities.Exam;
+import com.example.collegescheduler.entities.Todo;
 
 @Database(entities = {Assignment.class, Course.class, Exam.class, Todo.class}, version = 1)
 public abstract class SchedulerDatabase extends RoomDatabase {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="assignment"
+            type="com.example.collegescheduler.entities.Assignment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/assignmentItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{assignment.assignmentName}"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Due: ` + assignment.assignmentDueDateMonth + `/` + assignment.assignmentDueDateDay+`/`+ assignment.assignmentDueDateYear + ` for `+ assignment.assignmentAssociatedClass}"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentItemName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

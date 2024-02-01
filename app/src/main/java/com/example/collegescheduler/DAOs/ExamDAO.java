@@ -6,7 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.collegescheduler.Entities.Exam;
+import com.example.collegescheduler.entities.Exam;
 
 import java.util.List;
 

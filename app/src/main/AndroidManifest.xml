@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CollegeScheduler"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.TodoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ExamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AssignmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

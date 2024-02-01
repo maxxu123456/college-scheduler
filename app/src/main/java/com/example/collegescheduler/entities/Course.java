@@ -1,4 +1,4 @@
-package com.example.collegescheduler.Entities;
+package com.example.collegescheduler.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

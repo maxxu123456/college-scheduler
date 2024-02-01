@@ -1,4 +1,4 @@
-package com.example.collegescheduler.Entities;
+package com.example.collegescheduler.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -16,7 +16,7 @@ public class Assignment {
     @ColumnInfo(name = "assignment_due_date_month")
     private int assignmentDueDateMonth;
 
-    @ColumnInfo(name = "assignment_due_date_month")
+    @ColumnInfo(name = "assignment_due_date_day")
     private int assignmentDueDateDay;
 
     @ColumnInfo(name = "assignment_due_date_year")
@@ -25,8 +25,7 @@ public class Assignment {
     @ColumnInfo(name = "assignment_associated_class")
     private String assignmentAssociatedClass;
 
-    public Assignment(int assignmentID, String assignmentName, int assignmentDueDateMonth, int assignmentDueDateDay, int assignmentDueDateYear, String assignmentAssociatedClass) {
-        this.assignmentID = assignmentID;
+    public Assignment(String assignmentName, int assignmentDueDateMonth, int assignmentDueDateDay, int assignmentDueDateYear, String assignmentAssociatedClass) {
         this.assignmentName = assignmentName;
         this.assignmentDueDateMonth = assignmentDueDateMonth;
         this.assignmentDueDateDay = assignmentDueDateDay;
