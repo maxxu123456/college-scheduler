@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 
 import com.example.collegescheduler.entities.Todo;
@@ -18,6 +19,9 @@ public interface TodoDAO {
 
     @Delete
     void delete(Todo todo);
+
+    @Update
+    void update(Todo todo);
 
     @Query("SELECT * FROM todos_table")
     LiveData<List<Todo>> getAllTodos();

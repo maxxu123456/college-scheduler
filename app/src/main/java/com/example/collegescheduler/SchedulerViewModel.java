@@ -79,4 +79,8 @@ public class SchedulerViewModel extends AndroidViewModel {
         myRepository.deleteTodo(todo);
     }
 
+    public void updateTodo(Todo todo) {
+        myRepository.updateTodo(todo);
+    }
+
 }
