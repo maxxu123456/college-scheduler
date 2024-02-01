@@ -8,19 +8,29 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.collegescheduler.Activities.AssignmentActivity;
+import com.example.collegescheduler.Activities.CourseActivity;
 
 public class MainActivity extends AppCompatActivity {
     Button assignmentsButton;
+    Button coursesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         assignmentsButton = findViewById(R.id.assignmentsButton);
+        coursesButton = findViewById(R.id.coursesButton);
         assignmentsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), AssignmentActivity.class);
+                startActivity(i);
+            }
+        });
+        coursesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CourseActivity.class);
                 startActivity(i);
             }
         });

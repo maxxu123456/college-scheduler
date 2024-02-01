@@ -19,8 +19,7 @@ public class Course {
     @ColumnInfo(name = "course_instructor")
     private String courseInstructor;
 
-    public Course(int courseId, String courseName, String courseTime, String courseInstructor) {
-        this.courseID = courseId;
+    public Course(String courseName, String courseTime, String courseInstructor) {
         this.courseName = courseName;
         this.courseTime = courseTime;
         this.courseInstructor = courseInstructor;
