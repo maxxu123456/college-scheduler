@@ -40,7 +40,7 @@ public class Todo {
         this.todoTask = todoTask;
     }
 
-    public boolean isTodoStatus() {
+    public boolean getTodoStatus() {
         return todoStatus;
     }
 

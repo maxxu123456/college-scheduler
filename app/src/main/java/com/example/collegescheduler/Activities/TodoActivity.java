@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,6 +40,7 @@ public class TodoActivity extends AppCompatActivity {
     private ArrayList<Todo> todoArrayList = new ArrayList<>();
 
     private TodoAdapter todoAdapter;
+
 
     private ActivityTodoBinding todoBinding;
 
@@ -97,7 +99,6 @@ public class TodoActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
     }
 
 }
