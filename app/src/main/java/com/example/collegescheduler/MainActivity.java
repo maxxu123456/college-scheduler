@@ -10,12 +10,15 @@ import android.widget.Button;
 import com.example.collegescheduler.Activities.AssignmentActivity;
 import com.example.collegescheduler.Activities.CourseActivity;
 import com.example.collegescheduler.Activities.ExamActivity;
+import com.example.collegescheduler.Activities.TodoActivity;
 
 public class MainActivity extends AppCompatActivity {
     Button assignmentsButton;
     Button coursesButton;
 
     Button examsButton;
+
+    Button todosButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         assignmentsButton = findViewById(R.id.assignmentsButton);
         coursesButton = findViewById(R.id.coursesButton);
         examsButton = findViewById(R.id.examsButton);
+        todosButton = findViewById(R.id.todosButton);
         assignmentsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ExamActivity.class);
+                startActivity(i);
+            }
+        });
+        todosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), TodoActivity.class);
                 startActivity(i);
             }
         });
