@@ -12,70 +12,102 @@
             android:id="@+id/examsHomeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="48dp"
             android:text="Go Home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/examsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:layout_marginTop="48dp"
+            android:text="Welcome to Exams"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/examsName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
             android:hint="Name of Exam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/examsHomeButton" />
+            app:layout_constraintTop_toBottomOf="@+id/examsHeading" />
 
         <EditText
             android:id="@+id/examsMonth"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
             android:hint="Month"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/examsName"
-            app:layout_constraintTop_toBottomOf="@+id/examsHomeButton" />
+            app:layout_constraintEnd_toStartOf="@+id/examsDay"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsDay"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
             android:hint="Day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.407"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsYear"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
             android:hint="Year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.196"
             app:layout_constraintStart_toEndOf="@+id/examsDay"
             app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsTime"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
             android:hint="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.368"
             app:layout_constraintStart_toEndOf="@+id/examsYear"
-            app:layout_constraintTop_toBottomOf="@+id/examsMonth" />
+            app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <EditText
             android:id="@+id/examsLocation"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="88dp"
             android:hint="Location"
-            app:layout_constraintStart_toEndOf="@+id/examsTime"
-            app:layout_constraintTop_toBottomOf="@+id/examsMonth" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examsName" />
 
         <Button
             android:id="@+id/examsAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="32dp"
             android:text="Add Exam"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsLocation" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/examsRecyclerView"
+            android:padding="20dp"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -83,7 +115,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examsAdd"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
