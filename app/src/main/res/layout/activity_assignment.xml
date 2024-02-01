@@ -41,7 +41,7 @@
 
         <EditText
             android:id="@+id/assignmentsName"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Name of Assignment"
@@ -56,6 +56,7 @@
             android:layout_marginTop="12dp"
             android:hint="Due Month"
             app:layout_constraintEnd_toStartOf="@+id/assignmentsDueDay"
+            app:layout_constraintHorizontal_bias="0.756"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
 
@@ -77,12 +78,13 @@
             android:layout_marginTop="12dp"
             android:hint="Due Year"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
             app:layout_constraintStart_toEndOf="@+id/assignmentsDueDay"
             app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsClass"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:hint="Class"
