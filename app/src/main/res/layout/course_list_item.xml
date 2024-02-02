@@ -14,13 +14,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,46 +80,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:padding="4dp"-->
-        <!--            android:paddingStart="20dp"-->
-        <!--            android:paddingEnd="20dp">-->
-
-        <!--            <TextView-->
-        <!--                android:id="@+id/cTitle"-->
-        <!--                style="@style/TextAppearance.MaterialComponents.Headline5"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginTop="12dp"-->
-        <!--                android:text="@{course.courseName}"-->
-        <!--                app:layout_constraintTop_toTopOf="parent"-->
-        <!--                tools:layout_editor_absoluteX="20dp" />-->
-
-        <!--            <TextView-->
-        <!--                android:id="@+id/cTime"-->
-        <!--                style="@style/TextAppearance.MaterialComponents.Subtitle2"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginTop="6dp"-->
-        <!--                android:paddingBottom="15dp"-->
-        <!--                android:text="@{course.courseTime}"-->
-        <!--                app:layout_constraintTop_toBottomOf="@+id/cInstructor"-->
-        <!--                tools:layout_editor_absoluteX="20dp" />-->
-
-        <!--            <TextView-->
-        <!--                android:id="@+id/cInstructor"-->
-        <!--                style="@style/TextAppearance.MaterialComponents.Subtitle2"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginTop="13dp"-->
-        <!--                android:text="@{course.courseInstructor}"-->
-        <!--                app:layout_constraintTop_toBottomOf="@+id/cTitle"-->
-        <!--                tools:layout_editor_absoluteX="4dp" />-->
-        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
     </androidx.cardview.widget.CardView>
 
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 </layout>
