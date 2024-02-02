@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,8 @@ import android.widget.EditText;
 
 import com.example.collegescheduler.Adapters.AssignmentAdapter;
 import com.example.collegescheduler.MainActivity;
+import com.example.collegescheduler.TouchHelpers.AssignmentsTouchHelper;
+import com.example.collegescheduler.TouchHelpers.ExamTouchHelper;
 import com.example.collegescheduler.databinding.ActivityAssignmentBinding;
 import com.example.collegescheduler.entities.Assignment;
 import com.example.collegescheduler.R;
@@ -86,7 +89,7 @@ public class AssignmentActivity extends AppCompatActivity {
             }
         });
 
-        assignmentAdapter = new AssignmentAdapter(assignmentArrayList);
+        assignmentAdapter = new AssignmentAdapter(assignmentArrayList, AssignmentActivity.this);
 
         recyclerView.setAdapter(assignmentAdapter);
 
@@ -143,6 +146,8 @@ public class AssignmentActivity extends AppCompatActivity {
             }
         });
 
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new AssignmentsTouchHelper(assignmentAdapter, schedulerViewModel));
+        itemTouchHelper.attachToRecyclerView(recyclerView);
 
     }
 

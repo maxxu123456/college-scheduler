@@ -1,5 +1,6 @@
 package com.example.collegescheduler.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -7,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.collegescheduler.Activities.AssignmentActivity;
 import com.example.collegescheduler.entities.Assignment;
 import com.example.collegescheduler.R;
 import com.example.collegescheduler.databinding.AssignmentListItemBinding;
@@ -16,8 +18,11 @@ import java.util.ArrayList;
 public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.AssignmentViewHolder> {
     private ArrayList<Assignment> assignments;
 
-    public AssignmentAdapter(ArrayList<Assignment> assignments) {
+    private AssignmentActivity activity;
+
+    public AssignmentAdapter(ArrayList<Assignment> assignments, AssignmentActivity activity) {
         this.assignments = assignments;
+        this.activity = activity;
     }
 
 
@@ -47,6 +52,14 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.As
         } else {
             return 0;
         }
+    }
+
+    public Assignment getItem(int position) {
+        return assignments.get(position);
+    }
+
+    public Context getContext() {
+        return activity;
     }
 
     public void setAssignments(ArrayList<Assignment> assignments) {

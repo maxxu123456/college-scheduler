@@ -19,6 +19,7 @@ import android.widget.EditText;
 import com.example.collegescheduler.Adapters.ExamAdapter;
 import com.example.collegescheduler.Adapters.TodoAdapter;
 import com.example.collegescheduler.MainActivity;
+import com.example.collegescheduler.TouchHelpers.ToDoTouchHelper;
 import com.example.collegescheduler.databinding.ActivityExamBinding;
 import com.example.collegescheduler.R;
 import com.example.collegescheduler.SchedulerDatabase;
@@ -73,7 +74,7 @@ public class TodoActivity extends AppCompatActivity {
             }
         });
 
-        todoAdapter = new TodoAdapter(todoArrayList);
+        todoAdapter = new TodoAdapter(todoArrayList, TodoActivity.this);
 
         recyclerView.setAdapter(todoAdapter);
 
@@ -99,6 +100,8 @@ public class TodoActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ToDoTouchHelper(todoAdapter, schedulerViewModel));
+        itemTouchHelper.attachToRecyclerView(recyclerView);
     }
 
 }
