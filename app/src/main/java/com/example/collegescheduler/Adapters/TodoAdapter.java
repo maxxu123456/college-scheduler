@@ -1,6 +1,7 @@
 package com.example.collegescheduler.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,13 +61,14 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
         }
     }
 
+    public ArrayList<Todo>  getAllTodos() {
+        return todos;
+    }
+
     public Todo getItem(int position) {
         return todos.get(position);
     }
 
-    public void editItem(int position) {
-        Todo todo = todos.get(position);
-    }
 
     public void setTodos(ArrayList<Todo> todos) {
         this.todos = todos;
