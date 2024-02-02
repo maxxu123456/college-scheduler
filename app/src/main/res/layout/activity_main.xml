@@ -12,31 +12,31 @@
             android:id="@+id/assignmentsButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="210dp"
+            android:layout_marginTop="32dp"
             android:backgroundTint="#3B64AC"
             android:text="Assignments"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/coursesButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="210dp"
+            android:layout_marginTop="32dp"
             android:backgroundTint="#BA5151"
             android:text="Courses"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/examsButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#D58C53"
             android:text="Exams"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,13 +48,25 @@
             android:id="@+id/todosButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#619962"
             android:text="Todos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/coursesButton" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="College Scheduler"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.257" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
