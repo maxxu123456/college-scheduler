@@ -1,5 +1,6 @@
 package com.example.collegescheduler.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -7,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.collegescheduler.Activities.ExamActivity;
 import com.example.collegescheduler.R;
 import com.example.collegescheduler.databinding.ExamListItemBinding;
 import com.example.collegescheduler.entities.Exam;
@@ -16,8 +18,11 @@ import java.util.ArrayList;
 public class ExamAdapter extends RecyclerView.Adapter<ExamAdapter.ExamViewHolder> {
     private ArrayList<Exam> exams;
 
-    public ExamAdapter(ArrayList<Exam> exams) {
+    private ExamActivity activity;
+
+    public ExamAdapter(ArrayList<Exam> exams, ExamActivity activity) {
         this.exams = exams;
+        this.activity = activity;
     }
 
 
@@ -52,6 +57,14 @@ public class ExamAdapter extends RecyclerView.Adapter<ExamAdapter.ExamViewHolder
     public void setExams(ArrayList<Exam> exam) {
         this.exams = exams;
         notifyDataSetChanged();
+    }
+
+    public Exam getItem(int position) {
+        return exams.get(position);
+    }
+
+    public Context getContext() {
+        return activity;
     }
 
     class ExamViewHolder extends RecyclerView.ViewHolder {

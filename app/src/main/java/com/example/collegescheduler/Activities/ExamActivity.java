@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,8 @@ import android.widget.EditText;
 
 import com.example.collegescheduler.Adapters.ExamAdapter;
 import com.example.collegescheduler.MainActivity;
+import com.example.collegescheduler.TouchHelpers.ExamTouchHelper;
+import com.example.collegescheduler.TouchHelpers.ToDoTouchHelper;
 import com.example.collegescheduler.databinding.ActivityExamBinding;
 import com.example.collegescheduler.R;
 import com.example.collegescheduler.SchedulerDatabase;
@@ -82,7 +85,7 @@ public class ExamActivity extends AppCompatActivity {
         };
         examArrayList.sort(examComparator);
 
-        examAdapter = new ExamAdapter(examArrayList);
+        examAdapter = new ExamAdapter(examArrayList, ExamActivity.this);
 
         recyclerView.setAdapter(examAdapter);
 
@@ -123,6 +126,9 @@ public class ExamActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ExamTouchHelper(examAdapter, schedulerViewModel));
+        itemTouchHelper.attachToRecyclerView(recyclerView);
 
     }
 

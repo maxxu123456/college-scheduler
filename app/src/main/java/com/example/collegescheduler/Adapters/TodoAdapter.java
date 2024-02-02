@@ -1,14 +1,17 @@
 package com.example.collegescheduler.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.collegescheduler.Activities.TodoActivity;
 import com.example.collegescheduler.R;
 import com.example.collegescheduler.databinding.TodoListItemBinding;
 import com.example.collegescheduler.entities.Todo;
@@ -17,9 +20,11 @@ import java.util.ArrayList;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder> {
     private ArrayList<Todo> todos;
+    private TodoActivity activity;
 
-    public TodoAdapter(ArrayList<Todo> todos) {
+    public TodoAdapter(ArrayList<Todo> todos, TodoActivity activity) {
         this.todos = todos;
+        this.activity = activity;
     }
 
 
@@ -40,7 +45,6 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
     public void onBindViewHolder(@NonNull TodoAdapter.TodoViewHolder holder, int position) {
         Todo current = todos.get(position);
         holder.todoListItemBinding.setTodo(current);
-//        holder.todoCheckBox.setChecked(current.getTodoStatus());
     }
 
     public boolean toBoolean(int num) {
@@ -56,7 +60,15 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
         }
     }
 
-    public void setTodos(ArrayList<Todo> todo) {
+    public Todo getItem(int position) {
+        return todos.get(position);
+    }
+
+    public void editItem(int position) {
+        Todo todo = todos.get(position);
+    }
+
+    public void setTodos(ArrayList<Todo> todos) {
         this.todos = todos;
         notifyDataSetChanged();
     }
@@ -69,10 +81,9 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
             super(todoListItemBinding.getRoot());
             this.todoListItemBinding = todoListItemBinding;
         }
+    }
 
-        public TodoViewHolder(@NonNull View itemView) {
-            super(itemView);
-//            todoCheckBox = itemView.findViewById(R.id.todoCheckBox);
-        }
+    public Context getContext() {
+        return activity;
     }
 }
