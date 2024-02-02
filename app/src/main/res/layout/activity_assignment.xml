@@ -103,6 +103,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/assignmentsClass" />
 
+        <Button
+            android:id="@+id/assignmentsDateSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By Date"
+            app:layout_constraintEnd_toStartOf="@+id/assignmentsAdd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd" />
+
+        <Button
+            android:id="@+id/assignmentsCourseSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/assignmentsAdd"
+            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd"
+            android:text="Sort By Course" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/assignmentsRecyclerView"
             android:layout_width="0dp"

@@ -26,13 +26,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AssignmentActivity extends AppCompatActivity {
+    //By Default, Assignments is sorted by Date
+    private enum AssignmentSort {
+        DATE,
+        COURSE
+    }
+
     Button homeButton;
     Button addButton;
+
+    Button dateSort;
+
+    Button courseSort;
     EditText assignmentsName;
     EditText assignmentsDueMonth;
     EditText assignmentsDueDay;
     EditText assignmentsDueYear;
     EditText assignmentsClass;
+
+    AssignmentSort sort = AssignmentSort.DATE;
 
     private SchedulerDatabase schedulerDatabase;
     private ArrayList<Assignment> assignmentArrayList = new ArrayList<>();
@@ -47,7 +59,6 @@ public class AssignmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignment);
-
 
         assignmentBinding = DataBindingUtil.setContentView(this, R.layout.activity_assignment);
 
@@ -66,6 +77,11 @@ public class AssignmentActivity extends AppCompatActivity {
                 for (Assignment a : assignments) {
                     assignmentArrayList.add(a);
                 }
+                if (sort == AssignmentSort.DATE) {
+                    sortAssignmentsByDate();
+                } else {
+                    sortAssignmentByCourse();
+                }
                 assignmentAdapter.notifyDataSetChanged();
             }
         });
@@ -76,6 +92,8 @@ public class AssignmentActivity extends AppCompatActivity {
 
         homeButton = findViewById(R.id.assignmentsHomeButton);
         addButton = findViewById(R.id.assignmentsAdd);
+        dateSort = findViewById(R.id.assignmentsDateSort);
+        courseSort = findViewById(R.id.assignmentsCourseSort);
         assignmentsName = findViewById(R.id.assignmentsName);
         assignmentsDueMonth = findViewById(R.id.assignmentsDueMonth);
         assignmentsDueDay = findViewById(R.id.assignmentsDueDay);
@@ -107,7 +125,46 @@ public class AssignmentActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        dateSort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sort = AssignmentSort.DATE;
+                sortAssignmentsByDate();
+                assignmentAdapter.notifyDataSetChanged();
+            }
+        });
+
+        courseSort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sort = AssignmentSort.COURSE;
+                sortAssignmentByCourse();
+                assignmentAdapter.notifyDataSetChanged();
+            }
+        });
+
 
     }
+
+    private void sortAssignmentsByDate() {
+        assignmentArrayList.sort((Assignment a1, Assignment a2) -> {
+            if (a1.getAssignmentDueDateYear() != a2.getAssignmentDueDateYear()) {
+                return Integer.compare(a1.getAssignmentDueDateYear(), a2.getAssignmentDueDateYear());
+            }
+
+            if (a1.getAssignmentDueDateMonth() != a2.getAssignmentDueDateMonth()) {
+                return Integer.compare(a1.getAssignmentDueDateMonth(), a2.getAssignmentDueDateMonth());
+            }
+            return Integer.compare(a1.getAssignmentDueDateDay(), a2.getAssignmentDueDateDay());
+        });
+    }
+
+    private void sortAssignmentByCourse() {
+        //Sort increasing alphabetically
+        assignmentArrayList.sort((Assignment a1, Assignment a2) -> {
+            return a1.getAssignmentAssociatedClass().toUpperCase().compareTo(a2.getAssignmentAssociatedClass().toUpperCase());
+        });
+    }
+
 
 }
