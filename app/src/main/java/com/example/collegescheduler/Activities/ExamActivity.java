@@ -1,5 +1,5 @@
 package com.example.collegescheduler.Activities;
-
+import java.util.Comparator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
@@ -73,6 +73,14 @@ public class ExamActivity extends AppCompatActivity {
                 examAdapter.notifyDataSetChanged();
             }
         });
+
+        Comparator<Exam> examComparator = new Comparator<Exam>() {
+            @Override
+            public int compare(Exam a, Exam b) {
+                return a.getExamName().compareTo(b.getExamName());
+            }
+        };
+        examArrayList.sort(examComparator);
 
         examAdapter = new ExamAdapter(examArrayList);
 

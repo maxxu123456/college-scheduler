@@ -16,9 +16,14 @@
 
         <Button
             android:id="@+id/assignmentsHomeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Go Home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconTint="#373030"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,8 +31,9 @@
             android:id="@+id/assignmentsHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="42dp"
             android:text="Welcome to Assignments"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,17 +41,22 @@
 
         <EditText
             android:id="@+id/assignmentsName"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="Name of Assignment"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsHomeButton" />
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsHeading" />
 
         <EditText
             android:id="@+id/assignmentsDueMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Assignment Due Month"
+            android:layout_marginTop="12dp"
+            android:hint="Due Month"
+            app:layout_constraintEnd_toStartOf="@+id/assignmentsDueDay"
+            app:layout_constraintHorizontal_bias="0.756"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
 
@@ -54,45 +65,79 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:hint="Assignment Due Day"
+            android:layout_marginTop="12dp"
+            android:hint="Due Day"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsDueMonth" />
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsDueYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Assignment Due Year"
-            app:layout_constraintStart_toEndOf="@+id/assignmentsDueMonth"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsClass" />
+            android:layout_marginTop="12dp"
+            android:hint="Due Year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toEndOf="@+id/assignmentsDueDay"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsClass"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Class"
-            app:layout_constraintStart_toEndOf="@+id/assignmentsName"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsHeading" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsDueDay" />
 
         <Button
             android:id="@+id/assignmentsAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#3B64AC"
             android:text="Add"
-            app:layout_constraintStart_toEndOf="@+id/assignmentsDueDay"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsDueYear" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsClass" />
+
+        <Button
+            android:id="@+id/assignmentsDateSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Sort By Date"
+            android:textColor="#3B64AC"
+            app:layout_constraintEnd_toStartOf="@+id/assignmentsAdd"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd" />
+
+        <Button
+            android:id="@+id/assignmentsCourseSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Sort By Course"
+            android:textColor="#3B64AC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/assignmentsAdd"
+            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/assignmentsRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="180sp"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsHeading"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/assignmentsAdd"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,44 +10,65 @@
 
         <Button
             android:id="@+id/coursesHomeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconTint="#373030"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coursesHeading"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Go Home"
+            android:layout_height="50dp"
+            android:layout_marginTop="42dp"
+            android:text="Welcome to Courses"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/coursesName"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Course Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesHomeButton" />
+            app:layout_constraintTop_toBottomOf="@+id/coursesHeading" />
 
         <EditText
             android:id="@+id/coursesTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Course Time"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/coursesName" />
 
         <EditText
             android:id="@+id/coursesInstructor"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="Course Instructor"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesTime" />
+            app:layout_constraintTop_toBottomOf="@+id/coursesName" />
 
         <Button
             android:id="@+id/coursesAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#BA5151"
             android:text="Add Course"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +78,7 @@
             android:id="@+id/coursesRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

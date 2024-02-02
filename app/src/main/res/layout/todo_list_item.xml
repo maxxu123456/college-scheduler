@@ -5,10 +5,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="todo"
             type="com.example.collegescheduler.entities.Todo" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,16 +19,44 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp">
-            <CheckBox
+
+            <Button
+                android:id="@+id/editCourse"
+                android:layout_width="43dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:backgroundTint="#9DCA9E"
+                android:gravity="center"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconGravity="textTop"
+                app:iconSize="28dp"
+                app:iconTint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.975"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
                 android:id="@+id/todoCheckBox"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{todo.getTodoTask}">
-            </CheckBox>
-        </RelativeLayout>
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@{todo.getTodoTask}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>
