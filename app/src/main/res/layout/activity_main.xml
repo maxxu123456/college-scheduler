@@ -42,7 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsButton" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsButton" />
 
         <Button
             android:id="@+id/todosButton"
@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesButton" />
+            app:layout_constraintTop_toBottomOf="@id/coursesButton" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@
             android:hint="Course Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesHeading" />
+            app:layout_constraintTop_toBottomOf="@id/coursesHeading" />
 
         <EditText
             android:id="@+id/coursesTime"
@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesName" />
+            app:layout_constraintTop_toBottomOf="@id/coursesName" />
 
         <EditText
             android:id="@+id/coursesInstructor"
@@ -61,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesName" />
+            app:layout_constraintTop_toBottomOf="@id/coursesName" />
 
         <Button
             android:id="@+id/coursesAdd"
@@ -72,7 +72,7 @@
             android:text="Add Course"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesInstructor" />
+            app:layout_constraintTop_toBottomOf="@id/coursesInstructor" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/coursesRecyclerView"
@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coursesAdd"
+            app:layout_constraintTop_toBottomOf="@id/coursesAdd"
             app:layout_constraintVertical_bias="1.0" />
 
 
