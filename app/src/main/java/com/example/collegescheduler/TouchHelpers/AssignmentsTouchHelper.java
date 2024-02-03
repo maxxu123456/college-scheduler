@@ -99,19 +99,19 @@ public class AssignmentsTouchHelper extends ItemTouchHelper.SimpleCallback {
                     }
 
                     if(assignmentMonth.getText().toString().length() != 0){
-                        newAssigment.setAssignmentDueDateMonth(Integer.getInteger(assignmentMonth.getText().toString()));
+                        newAssigment.setAssignmentDueDateMonth(Integer.parseInt(assignmentMonth.getText().toString()));
                     } else {
                         newAssigment.setAssignmentDueDateMonth(assignment.getAssignmentDueDateMonth());
                     }
 
                     if(assignmentDay.getText().toString().length() != 0){
-                        newAssigment.setAssignmentDueDateDay(Integer.getInteger(assignmentDay.getText().toString()));
+                        newAssigment.setAssignmentDueDateDay(Integer.parseInt(assignmentDay.getText().toString()));
                     } else {
                         newAssigment.setAssignmentDueDateDay(assignment.getAssignmentDueDateDay());
                     }
 
                     if(assignmentYear.getText().toString().length() != 0){
-                        newAssigment.setAssignmentDueDateYear(Integer.getInteger(assignmentYear.getText().toString()));
+                        newAssigment.setAssignmentDueDateYear(Integer.parseInt(assignmentYear.getText().toString()));
                     } else {
                         newAssigment.setAssignmentDueDateYear(assignment.getAssignmentDueDateYear());
                     }

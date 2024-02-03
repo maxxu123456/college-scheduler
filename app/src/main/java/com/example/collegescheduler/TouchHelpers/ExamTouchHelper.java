@@ -108,19 +108,19 @@ public class ExamTouchHelper extends ItemTouchHelper.SimpleCallback {
                     }
 
                     if(examMonth.getText().toString().length() != 0){
-                        newExam.setExamMonth(Integer.getInteger(examMonth.getText().toString()));
+                        newExam.setExamMonth(Integer.parseInt(examMonth.getText().toString()));
                     } else {
                         newExam.setExamMonth(exam.getExamMonth());
                     }
 
                     if(examDay.getText().toString().length() != 0){
-                        newExam.setExamDay(Integer.getInteger(examDay.getText().toString()));
+                        newExam.setExamDay(Integer.parseInt(examDay.getText().toString()));
                     } else {
                         newExam.setExamDay(exam.getExamDay());
                     }
 
                     if(examYear.getText().toString().length() != 0){
-                        newExam.setExamYear(Integer.getInteger(examYear.getText().toString()));
+                        newExam.setExamYear(Integer.parseInt(examYear.getText().toString()));
                     } else {
                         newExam.setExamYear(exam.getExamYear());
                     }

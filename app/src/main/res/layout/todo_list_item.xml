@@ -24,24 +24,6 @@
             android:layout_height="wrap_content"
             android:padding="8dp">
 
-            <Button
-                android:id="@+id/editCourse"
-                android:layout_width="43dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:backgroundTint="#9DCA9E"
-                android:gravity="center"
-                app:icon="@android:drawable/ic_menu_edit"
-                app:iconGravity="textTop"
-                app:iconSize="28dp"
-                app:iconTint="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.975"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
             <TextView
                 android:id="@+id/todoCheckBox"
                 style="@style/TextAppearance.MaterialComponents.Subtitle1"
