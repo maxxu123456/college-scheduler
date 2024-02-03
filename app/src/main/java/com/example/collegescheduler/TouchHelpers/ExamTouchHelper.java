@@ -83,7 +83,7 @@ public class ExamTouchHelper extends ItemTouchHelper.SimpleCallback {
             examTime.setHint(String.valueOf(exam.getExamTime()));
             examLocation.setHint(String.valueOf(exam.getExamLocation()));
 
-            builder.setView(dial ogView);
+            builder.setView(dialogView);
             builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -113,15 +113,15 @@ public class ExamTouchHelper extends ItemTouchHelper.SimpleCallback {
                     }
 
                     if(examDay.getText().toString().length() != 0){
-                        newExam.setExamMonth(Integer.getInteger(examDay.getText().toString()));
+                        newExam.setExamDay(Integer.getInteger(examDay.getText().toString()));
                     } else {
-                        newExam.setExamMonth(exam.getExamDay());
+                        newExam.setExamDay(exam.getExamDay());
                     }
 
                     if(examYear.getText().toString().length() != 0){
-                        newExam.setExamMonth(Integer.getInteger(examYear.getText().toString()));
+                        newExam.setExamYear(Integer.getInteger(examYear.getText().toString()));
                     } else {
-                        newExam.setExamMonth(exam.getExamYear());
+                        newExam.setExamYear(exam.getExamYear());
                     }
                     schedulerViewModel.addNewExam(newExam);
                     schedulerViewModel.deleteExam(adapter.getItem(position));
