@@ -18,12 +18,12 @@ import java.util.ArrayList;
 public class ToDoTouchHelper extends ItemTouchHelper.SimpleCallback{
 
     private TodoAdapter adapter;
-    private SchedulerViewModel schedularViewModel;
+    private SchedulerViewModel schedulerViewModel;
 
     public ToDoTouchHelper(TodoAdapter adapter, SchedulerViewModel model) {
         super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
         this.adapter = adapter;
-        this.schedularViewModel = model;
+        this.schedulerViewModel = model;
     }
 
 
@@ -42,7 +42,7 @@ public class ToDoTouchHelper extends ItemTouchHelper.SimpleCallback{
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    schedularViewModel.deleteTodo(adapter.getItem(position));
+                    schedulerViewModel.deleteTodo(adapter.getItem(position));
                 }
             });
 
@@ -70,8 +70,8 @@ public class ToDoTouchHelper extends ItemTouchHelper.SimpleCallback{
                     } else {
                         Todo newTask = new Todo();
                         newTask.setTodoTask(input.getText().toString());
-                        schedularViewModel.addNewTodo(newTask);
-                        schedularViewModel.deleteTodo(adapter.getItem(position));
+                        schedulerViewModel.addNewTodo(newTask);
+                        schedulerViewModel.deleteTodo(adapter.getItem(position));
                         adapter.notifyItemChanged(position);
                     }
                 }
