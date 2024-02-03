@@ -64,7 +64,7 @@
                 android:layout_marginTop="6dp"
                 android:paddingBottom="15dp"
                 android:text="@{exam.examMonth + `/` + exam.examDay + `/` + exam.examYear + ` - ` + exam.examTime}"
-                app:layout_constraintTop_toBottomOf="@+id/eLocation"
+                app:layout_constraintTop_toBottomOf="@id/eLocation"
                 tools:layout_editor_absoluteX="4dp" />
 
             <TextView
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:text="@{exam.examLocation}"
-                app:layout_constraintTop_toBottomOf="@+id/eTitle"
+                app:layout_constraintTop_toBottomOf="@id/eTitle"
                 tools:layout_editor_absoluteX="4dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

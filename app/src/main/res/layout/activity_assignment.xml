@@ -47,7 +47,7 @@
             android:hint="Name of Assignment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsHeading" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsHeading" />
 
         <EditText
             android:id="@+id/assignmentsDueMonth"
@@ -55,10 +55,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:hint="Due Month"
-            app:layout_constraintEnd_toStartOf="@+id/assignmentsDueDay"
+            app:layout_constraintEnd_toStartOf="@id/assignmentsDueDay"
             app:layout_constraintHorizontal_bias="0.756"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsDueDay"
@@ -69,7 +69,7 @@
             android:hint="Due Day"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsDueYear"
@@ -79,8 +79,8 @@
             android:hint="Due Year"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.382"
-            app:layout_constraintStart_toEndOf="@+id/assignmentsDueDay"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsName" />
+            app:layout_constraintStart_toEndOf="@id/assignmentsDueDay"
+            app:layout_constraintTop_toBottomOf="@id/assignmentsName" />
 
         <EditText
             android:id="@+id/assignmentsClass"
@@ -90,7 +90,7 @@
             android:hint="Class"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsDueDay" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsDueDay" />
 
         <Button
             android:id="@+id/assignmentsAdd"
@@ -101,7 +101,7 @@
             android:text="Add"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsClass" />
+            app:layout_constraintTop_toBottomOf="@id/assignmentsClass" />
 
         <Button
             android:id="@+id/assignmentsDateSort"
@@ -110,10 +110,10 @@
             android:backgroundTint="@android:color/transparent"
             android:text="Sort By Date"
             android:textColor="#3B64AC"
-            app:layout_constraintEnd_toStartOf="@+id/assignmentsAdd"
+            app:layout_constraintEnd_toStartOf="@id/assignmentsAdd"
             app:layout_constraintHorizontal_bias="0.685"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd" />
+            app:layout_constraintTop_toTopOf="@id/assignmentsAdd" />
 
         <Button
             android:id="@+id/assignmentsCourseSort"
@@ -124,8 +124,8 @@
             android:textColor="#3B64AC"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/assignmentsAdd"
-            app:layout_constraintTop_toTopOf="@+id/assignmentsAdd" />
+            app:layout_constraintStart_toEndOf="@id/assignmentsAdd"
+            app:layout_constraintTop_toTopOf="@id/assignmentsAdd" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/assignmentsRecyclerView"
@@ -136,7 +136,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignmentsAdd"
+            app:layout_constraintTop_toBottomOf="@id/assignmentsAdd"
             app:layout_constraintVertical_bias="0.0" />
 
 

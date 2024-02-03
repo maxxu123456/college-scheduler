@@ -65,7 +65,7 @@
                 android:layout_marginTop="6dp"
                 android:paddingBottom="15dp"
                 android:text="@{course.courseTime}"
-                app:layout_constraintTop_toBottomOf="@+id/cInstructor"
+                app:layout_constraintTop_toBottomOf="@id/cInstructor"
                 tools:layout_editor_absoluteX="4dp" />
 
             <TextView
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:text="@{course.courseInstructor}"
-                app:layout_constraintTop_toBottomOf="@+id/cTitle"
+                app:layout_constraintTop_toBottomOf="@id/cTitle"
                 tools:layout_editor_absoluteX="4dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

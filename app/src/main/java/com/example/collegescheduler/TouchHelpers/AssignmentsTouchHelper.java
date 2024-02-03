@@ -60,6 +60,7 @@ public class AssignmentsTouchHelper extends ItemTouchHelper.SimpleCallback {
             LayoutInflater inflater = LayoutInflater.from(adapter.getContext());
             View dialogView = inflater.inflate(R.layout.assignment_edit_item, null);
             AlertDialog.Builder builder = new AlertDialog.Builder(adapter.getContext());
+            builder.setTitle("Edit Assigment");
 
 
             final EditText assignmentName = dialogView.findViewById(R.id.edit_assignment_name);

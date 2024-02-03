@@ -60,6 +60,7 @@ public class ExamTouchHelper extends ItemTouchHelper.SimpleCallback {
             LayoutInflater inflater = LayoutInflater.from(adapter.getContext());
             View dialogView = inflater.inflate(R.layout.exam_edit_item, null);
             AlertDialog.Builder builder = new AlertDialog.Builder(adapter.getContext());
+            builder.setTitle("Edit Exam");
 
 
             final EditText examName = dialogView.findViewById(R.id.edit_exam_name);
